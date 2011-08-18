@@ -25,10 +25,12 @@
 {
 	[super windowDidLoad];
 	// Init objects here.
+	_db  = [[SLDatabase alloc] init];
 }
 #pragma mark Destructors
 - (void)dealloc
 {
+	[_db release];
 	// Destruct objects here.
 	[super dealloc];
 }
@@ -49,13 +51,11 @@
 #pragma mark Methods
 - (void)setValuesFromFields
 {
-	NSLog(@"host: %@", [_hostField stringValue]);
 	[_db setHost:[_hostField stringValue]];
 	[_db setPort:[_portField intValue]];
 	[_db setUser:[_userField stringValue]];
 	[_db setPassword:[_passwordField stringValue]];
 	[_db setDatabase:[_databaseField stringValue]];
-	NSLog(@"host: %@", [_db host]);
 }
 
 

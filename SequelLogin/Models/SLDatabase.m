@@ -41,10 +41,6 @@
 #pragma mark Methods
 - (NSString *)connectMCPKit
 {
-	NSString *error;
-	// Check
-	if( [error isEqualTo:@""] )
-	{ return error; }
 	// Configure
 	_mysql = [ [MCPConnection alloc] initToHost:_host
 																		withLogin:_user
@@ -53,18 +49,10 @@
 	[_mysql setPassword:_password];
 	// Connect
 	[_mysql connect];
-	// Check _db
-	error = [_mysql getLastErrorMessage];
-	if( [error isEqualTo:@""] )
-	{ return error; }
 	// Select Database
 	[_mysql selectDB:_database];
-	// Check Select
-	error = [_mysql getLastErrorMessage];
-	if( [error isEqualTo:@""] )
-	{ return error; }
 	// Successfull
-	return nil;
+	return [_mysql getLastErrorMessage];
 }
 - (MCPResult *)query:(NSString *)q
 {
