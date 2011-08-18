@@ -34,4 +34,29 @@
 }
 
 
+#pragma mark Synthesizers
+@synthesize db = _db;
+
+
+#pragma mark Actions
+- (IBAction)connectButton:(id)sender
+{
+	[self setValuesFromFields];
+	NSLog(@"MySQL: %@", [_db connectMCPKit]);
+}
+
+
+#pragma mark Methods
+- (void)setValuesFromFields
+{
+	NSLog(@"host: %@", [_hostField stringValue]);
+	[_db setHost:[_hostField stringValue]];
+	[_db setPort:[_portField intValue]];
+	[_db setUser:[_userField stringValue]];
+	[_db setPassword:[_passwordField stringValue]];
+	[_db setDatabase:[_databaseField stringValue]];
+	NSLog(@"host: %@", [_db host]);
+}
+
+
 @end

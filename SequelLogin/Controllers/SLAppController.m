@@ -18,6 +18,9 @@
 	if (self)
 	{
 		// Init objects here.
+		[self loadConnectWindowController];
+		//[self loadUserWindowController];
+		//[self loadDataWindowController];
 	}
 	return self;
 }
@@ -27,6 +30,24 @@
 {
 	// Destruct objects here.
 	[super dealloc];
+}
+
+
+#pragma mark Methods
+- (void)loadConnectWindowController
+{
+	_cWinCtl = [[ConnectWindowController alloc] initWithWindowNibName:@"ConnectWindowController"];
+	[_cWinCtl showWindow:self];
+}
+- (void)loadUserWindowController
+{
+	_uWinCtl = [[UserWindowController alloc] initWithWindowNibName:@"UserWindowController"];
+	[_uWinCtl showWindow:self];
+}
+- (void)loadDataWindowController
+{
+	_uWinCtl = [[DataWindowController alloc] initWithWindowNibName:@"DataWindowController"];
+	[_uWinCtl showWindow:self];
 }
 
 

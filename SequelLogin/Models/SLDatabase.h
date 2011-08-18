@@ -25,6 +25,8 @@
 
 
 #pragma mark Properties
+@property (copy) MCPConnection *mysql;
+
 @property (copy) NSString *host;
 @property (assign) NSUInteger port;
 @property (copy) NSString *user;

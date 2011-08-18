@@ -7,14 +7,29 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DatabaseProtocol.h"
 
 
-@interface ConnectWindowController : NSWindowController
+@interface ConnectWindowController : NSWindowController <DatabaseProtocol>
 {
 @private
 #pragma mark Outlets
+	SLDatabase *_db;
+	IBOutlet NSTextField *_hostField;
+	IBOutlet NSTextField *_portField;
+	IBOutlet NSTextField *_userField;
+	IBOutlet NSTextField *_passwordField;
+	IBOutlet NSTextField *_databaseField;
 #pragma mark Objects
 }
+
+
+#pragma mark Actions
+- (IBAction)connectButton:(id)sender;
+
+
+#pragma mark Methods
+- (void)setValuesFromFields;
 
 
 @end

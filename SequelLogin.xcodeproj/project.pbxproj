@@ -16,6 +16,8 @@
 		860E697813FD30CF00E94760 /* MCPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860E697713FD30CF00E94760 /* MCPKit.framework */; };
 		860E697913FD30F600E94760 /* MCPKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 860E697713FD30CF00E94760 /* MCPKit.framework */; };
 		860E697B13FD310F00E94760 /* appicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 860E697A13FD310F00E94760 /* appicon.icns */; };
+		86CF3C9813FDA86500E8DBDA /* SLEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CF3C9713FDA86500E8DBDA /* SLEvent.m */; };
+		86CF3C9C13FDA88F00E8DBDA /* SLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CF3C9B13FDA88F00E8DBDA /* SLUser.m */; };
 		86F540E913FD37450049338C /* SLAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F540E813FD37450049338C /* SLAppController.m */; };
 		86F540ED13FD62BC0049338C /* ConnectWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F540EC13FD62BC0049338C /* ConnectWindowController.xib */; };
 		86F540F913FD63750049338C /* UserWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F540F813FD63750049338C /* UserWindowController.xib */; };
@@ -59,6 +61,10 @@
 		860E696F13FD303900E94760 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		860E697713FD30CF00E94760 /* MCPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MCPKit.framework; path = SequelLogin/Frameworks/MCPKit.framework; sourceTree = "<group>"; };
 		860E697A13FD310F00E94760 /* appicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = appicon.icns; path = ../appicon.icns; sourceTree = "<group>"; };
+		86CF3C9613FDA86500E8DBDA /* SLEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLEvent.h; sourceTree = "<group>"; };
+		86CF3C9713FDA86500E8DBDA /* SLEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLEvent.m; sourceTree = "<group>"; };
+		86CF3C9A13FDA88F00E8DBDA /* SLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUser.h; sourceTree = "<group>"; };
+		86CF3C9B13FDA88F00E8DBDA /* SLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUser.m; sourceTree = "<group>"; };
 		86F540E713FD37450049338C /* SLAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAppController.h; sourceTree = "<group>"; };
 		86F540E813FD37450049338C /* SLAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAppController.m; sourceTree = "<group>"; };
 		86F540EC13FD62BC0049338C /* ConnectWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectWindowController.xib; sourceTree = "<group>"; };
@@ -211,6 +217,10 @@
 			children = (
 				86F5411C13FD7C660049338C /* SLDatabase.h */,
 				86F5411D13FD7C660049338C /* SLDatabase.m */,
+				86CF3C9613FDA86500E8DBDA /* SLEvent.h */,
+				86CF3C9713FDA86500E8DBDA /* SLEvent.m */,
+				86CF3C9A13FDA88F00E8DBDA /* SLUser.h */,
+				86CF3C9B13FDA88F00E8DBDA /* SLUser.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,6 +312,8 @@
 				86F5411413FD6E240049338C /* LoginViewController.m in Sources */,
 				86F5411913FD73510049338C /* EventViewController.m in Sources */,
 				86F5411E13FD7C660049338C /* SLDatabase.m in Sources */,
+				86CF3C9813FDA86500E8DBDA /* SLEvent.m in Sources */,
+				86CF3C9C13FDA88F00E8DBDA /* SLUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

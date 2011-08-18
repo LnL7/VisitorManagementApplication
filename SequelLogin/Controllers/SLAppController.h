@@ -22,4 +22,10 @@
 }
 
 
+#pragma mark Methods
+- (void)loadConnectWindowController;
+- (void)loadUserWindowController;
+- (void)loadDataWindowController;
+
+
 @end
