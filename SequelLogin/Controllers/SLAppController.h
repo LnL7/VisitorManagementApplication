@@ -7,13 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ConnectWindowController.h"
+#import "UserWindowController.h"
+#import "DataWindowController.h"
 
 
 @interface SLAppController : NSObject
 {
 @private
 #pragma mark Objects
-	
+	ConnectWindowController *_cWinCtl;
+	UserWindowController *_uWinCtl;
+	DataWindowController *_dWinCtl;
 }
 
 

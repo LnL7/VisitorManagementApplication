@@ -22,6 +22,9 @@
 		86F540FB13FD63860049338C /* DataWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F540FA13FD63860049338C /* DataWindowController.xib */; };
 		86F5410513FD65970049338C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F5410413FD65970049338C /* LoginViewController.xib */; };
 		86F5410713FD65A60049338C /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F5410613FD65A60049338C /* EventViewController.xib */; };
+		86F5410A13FD6AEA0049338C /* ConnectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5410913FD6AEA0049338C /* ConnectWindowController.m */; };
+		86F5410D13FD6BAD0049338C /* UserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5410C13FD6BAD0049338C /* UserWindowController.m */; };
+		86F5411013FD6C670049338C /* DataWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5410F13FD6C670049338C /* DataWindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +63,12 @@
 		86F540FA13FD63860049338C /* DataWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataWindowController.xib; sourceTree = "<group>"; };
 		86F5410413FD65970049338C /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		86F5410613FD65A60049338C /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
+		86F5410813FD6AEA0049338C /* ConnectWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectWindowController.h; sourceTree = "<group>"; };
+		86F5410913FD6AEA0049338C /* ConnectWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectWindowController.m; sourceTree = "<group>"; };
+		86F5410B13FD6BAD0049338C /* UserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserWindowController.h; sourceTree = "<group>"; };
+		86F5410C13FD6BAD0049338C /* UserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserWindowController.m; sourceTree = "<group>"; };
+		86F5410E13FD6C670049338C /* DataWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataWindowController.h; sourceTree = "<group>"; };
+		86F5410F13FD6C670049338C /* DataWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +170,12 @@
 		86F540E213FD371F0049338C /* Windows */ = {
 			isa = PBXGroup;
 			children = (
+				86F5410813FD6AEA0049338C /* ConnectWindowController.h */,
+				86F5410913FD6AEA0049338C /* ConnectWindowController.m */,
+				86F5410B13FD6BAD0049338C /* UserWindowController.h */,
+				86F5410C13FD6BAD0049338C /* UserWindowController.m */,
+				86F5410E13FD6C670049338C /* DataWindowController.h */,
+				86F5410F13FD6C670049338C /* DataWindowController.m */,
 			);
 			path = Windows;
 			sourceTree = "<group>";
@@ -264,6 +279,9 @@
 				860E696713FD303900E94760 /* main.m in Sources */,
 				860E696D13FD303900E94760 /* SequelLoginAppDelegate.m in Sources */,
 				86F540E913FD37450049338C /* SLAppController.m in Sources */,
+				86F5410A13FD6AEA0049338C /* ConnectWindowController.m in Sources */,
+				86F5410D13FD6BAD0049338C /* UserWindowController.m in Sources */,
+				86F5411013FD6C670049338C /* DataWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

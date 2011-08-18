@@ -14,19 +14,19 @@
 #pragma mark Initializers
 - (id)init
 {
-    self = [super init];
-    if (self)
-		{
-        // Initialization code here.
-    }
-    
-    return self;
+	self = [super init];
+	if (self)
+	{
+		// Init objects here.
+	}
+	return self;
 }
 
 #pragma mark Destructors
 - (void)dealloc
 {
-    [super dealloc];
+	// Destruct objects here.
+	[super dealloc];
 }
 
 
