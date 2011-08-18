@@ -44,7 +44,7 @@
 - (IBAction)connectButton:(id)sender
 {
 	[self setValuesFromFields];
-	NSLog(@"MySQL: %@", [_db connectMCPKit]);
+	[_errorField setStringValue:[_db connectMCPKit]];
 	[_db log];
 }
 

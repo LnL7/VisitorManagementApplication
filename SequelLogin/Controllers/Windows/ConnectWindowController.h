@@ -20,6 +20,7 @@
 	IBOutlet NSTextField *_userField;
 	IBOutlet NSTextField *_passwordField;
 	IBOutlet NSTextField *_databaseField;
+	IBOutlet NSTextField *_errorField;
 #pragma mark Objects
 }
 
