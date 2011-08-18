@@ -14,6 +14,7 @@
 {
 @private
 #pragma mark Outlets
+	id<DatabaseProtocol> _superCtl;
 	SLDatabase *_db;
 	IBOutlet NSTextField *_hostField;
 	IBOutlet NSTextField *_portField;

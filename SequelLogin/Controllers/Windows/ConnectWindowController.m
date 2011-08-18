@@ -36,17 +36,23 @@
 }
 
 
-#pragma mark Synthesizers
-@synthesize db = _db;
-
-
 #pragma mark Actions
 - (IBAction)connectButton:(id)sender
 {
 	[self setValuesFromFields];
-	[_errorField setStringValue:[_db connectMCPKit]];
-	[_db log];
+	NSString *error = [_db connectMCPKit];
+	if( !error )
+	{
+		//[_db log];
+		[_superCtl setDb:_db];
+	}
+	else { [_errorField setStringValue:error]; }
 }
+
+
+#pragma mark Synthesizers
+@synthesize superCtl = _superCtl;
+@synthesize db = _db;
 
 
 #pragma mark Methods

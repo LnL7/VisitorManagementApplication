@@ -33,21 +33,29 @@
 }
 
 
+#pragma mark Synthesizers
+@synthesize superCtl = _superCtl;
+@synthesize db = _db;
+
+
 #pragma mark Methods
 - (void)loadConnectWindowController
 {
 	_cWinCtl = [[ConnectWindowController alloc] initWithWindowNibName:@"ConnectWindowController"];
+	[_cWinCtl setSuperCtl:self];
 	[_cWinCtl showWindow:self];
 }
 - (void)loadUserWindowController
 {
 	_uWinCtl = [[UserWindowController alloc] initWithWindowNibName:@"UserWindowController"];
+	[_uWinCtl setSuperCtl:self];
 	[_uWinCtl showWindow:self];
 }
 - (void)loadDataWindowController
 {
-	_uWinCtl = [[DataWindowController alloc] initWithWindowNibName:@"DataWindowController"];
-	[_uWinCtl showWindow:self];
+	_dWinCtl = [[DataWindowController alloc] initWithWindowNibName:@"DataWindowController"];
+	[_dWinCtl setSuperCtl:self];
+	[_dWinCtl showWindow:self];
 }
 
 

@@ -7,13 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DatabaseProtocol.h"
 
 
-@interface EventViewController : NSViewController
+@interface EventViewController : NSViewController <DatabaseProtocol>
 {
 @private
 #pragma mark Outlets
 #pragma mark Objects
+	id<DatabaseProtocol> _superCtl;
+	SLDatabase *_db;
 }
 
 

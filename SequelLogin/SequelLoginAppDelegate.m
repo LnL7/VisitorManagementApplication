@@ -16,6 +16,7 @@
 {
 	// Application Initialization
 	_appCtl = [[SLAppController alloc] init];
+	[_appCtl setSuperCtl:_appCtl];
 }
 
 

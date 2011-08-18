@@ -7,12 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DatabaseProtocol.h"
 
 
-@interface UserWindowController : NSWindowController
+@interface UserWindowController : NSWindowController <DatabaseProtocol>
 {
 @private
 #pragma mark Objects
+	id<DatabaseProtocol> _superCtl;
+	SLDatabase *_db;
 }
 
 

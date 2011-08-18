@@ -34,4 +34,9 @@
 }
 
 
+#pragma mark Synthesizers
+@synthesize superCtl = _superCtl;
+@synthesize db = _db;
+
+
 @end

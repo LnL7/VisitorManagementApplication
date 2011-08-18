@@ -13,6 +13,7 @@
 @protocol DatabaseProtocol <NSObject>
 
 #pragma mark Properties
+@property (assign) id<DatabaseProtocol> superCtl;
 @property (copy) SLDatabase *db;
 
 
