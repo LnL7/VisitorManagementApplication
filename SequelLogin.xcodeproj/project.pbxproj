@@ -17,6 +17,9 @@
 		860E697913FD30F600E94760 /* MCPKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 860E697713FD30CF00E94760 /* MCPKit.framework */; };
 		860E697B13FD310F00E94760 /* appicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 860E697A13FD310F00E94760 /* appicon.icns */; };
 		86F540E913FD37450049338C /* SLAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F540E813FD37450049338C /* SLAppController.m */; };
+		86F540ED13FD62BC0049338C /* ConnectWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F540EC13FD62BC0049338C /* ConnectWindowController.xib */; };
+		86F540F913FD63750049338C /* UserWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F540F813FD63750049338C /* UserWindowController.xib */; };
+		86F540FB13FD63860049338C /* DataWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F540FA13FD63860049338C /* DataWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +53,9 @@
 		860E697A13FD310F00E94760 /* appicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = appicon.icns; path = ../appicon.icns; sourceTree = "<group>"; };
 		86F540E713FD37450049338C /* SLAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAppController.h; sourceTree = "<group>"; };
 		86F540E813FD37450049338C /* SLAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAppController.m; sourceTree = "<group>"; };
+		86F540EC13FD62BC0049338C /* ConnectWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectWindowController.xib; sourceTree = "<group>"; };
+		86F540F813FD63750049338C /* UserWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserWindowController.xib; sourceTree = "<group>"; };
+		86F540FA13FD63860049338C /* DataWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,9 @@
 		86F540E313FD371F0049338C /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				86F540EC13FD62BC0049338C /* ConnectWindowController.xib */,
+				86F540F813FD63750049338C /* UserWindowController.xib */,
+				86F540FA13FD63860049338C /* DataWindowController.xib */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -231,6 +240,9 @@
 				860E696A13FD303900E94760 /* Credits.rtf in Resources */,
 				860E697013FD303900E94760 /* MainMenu.xib in Resources */,
 				860E697B13FD310F00E94760 /* appicon.icns in Resources */,
+				86F540ED13FD62BC0049338C /* ConnectWindowController.xib in Resources */,
+				86F540F913FD63750049338C /* UserWindowController.xib in Resources */,
+				86F540FB13FD63860049338C /* DataWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
