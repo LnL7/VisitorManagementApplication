@@ -59,6 +59,12 @@
 	MCPResult *result = [_mysql queryString:q];
 	return result;
 }
-
+- (void)log
+{
+	MCPResult *r = [self query:@"SELECT name_str FROM user_list LIMIT 0,25;"];
+	NSLog(@"%@", [[r fetchRowAsArray] objectAtIndex:0] );
+	NSLog(@"%@", [[r fetchRowAsArray] objectAtIndex:0] );
+	NSLog(@"%@", [[r fetchRowAsArray] objectAtIndex:0] );
+}
 
 @end

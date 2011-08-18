@@ -45,6 +45,7 @@
 {
 	[self setValuesFromFields];
 	NSLog(@"MySQL: %@", [_db connectMCPKit]);
+	[_db log];
 }
 
 

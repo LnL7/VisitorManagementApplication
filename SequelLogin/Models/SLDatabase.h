@@ -37,6 +37,7 @@
 #pragma mark Methods
 - (NSString *)connectMCPKit;
 - (MCPResult *)query:(NSString *)q;
+- (void)log;
 
 
 @end
