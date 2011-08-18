@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		860E695A13FD303900E94760 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860E695913FD303900E94760 /* Cocoa.framework */; };
+		860E696413FD303900E94760 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 860E696213FD303900E94760 /* InfoPlist.strings */; };
+		860E696713FD303900E94760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 860E696613FD303900E94760 /* main.m */; };
+		860E696A13FD303900E94760 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 860E696813FD303900E94760 /* Credits.rtf */; };
+		860E696D13FD303900E94760 /* SequelLoginAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 860E696C13FD303900E94760 /* SequelLoginAppDelegate.m */; };
+		860E697013FD303900E94760 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860E696E13FD303900E94760 /* MainMenu.xib */; };
+		860E697813FD30CF00E94760 /* MCPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860E697713FD30CF00E94760 /* MCPKit.framework */; };
+		860E697913FD30F600E94760 /* MCPKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 860E697713FD30CF00E94760 /* MCPKit.framework */; };
+		860E697B13FD310F00E94760 /* appicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 860E697A13FD310F00E94760 /* appicon.icns */; };
+		86F540E913FD37450049338C /* SLAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F540E813FD37450049338C /* SLAppController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		860E697613FD304700E94760 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				860E697913FD30F600E94760 /* MCPKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		860E695513FD303900E94760 /* SequelLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SequelLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		860E695913FD303900E94760 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		860E695C13FD303900E94760 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		860E695D13FD303900E94760 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		860E695E13FD303900E94760 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		860E696113FD303900E94760 /* SequelLogin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SequelLogin-Info.plist"; sourceTree = "<group>"; };
+		860E696313FD303900E94760 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		860E696513FD303900E94760 /* SequelLogin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SequelLogin-Prefix.pch"; sourceTree = "<group>"; };
+		860E696613FD303900E94760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		860E696913FD303900E94760 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		860E696B13FD303900E94760 /* SequelLoginAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequelLoginAppDelegate.h; sourceTree = "<group>"; };
+		860E696C13FD303900E94760 /* SequelLoginAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SequelLoginAppDelegate.m; sourceTree = "<group>"; };
+		860E696F13FD303900E94760 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		860E697713FD30CF00E94760 /* MCPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MCPKit.framework; path = SequelLogin/Frameworks/MCPKit.framework; sourceTree = "<group>"; };
+		860E697A13FD310F00E94760 /* appicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = appicon.icns; path = ../appicon.icns; sourceTree = "<group>"; };
+		86F540E713FD37450049338C /* SLAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAppController.h; sourceTree = "<group>"; };
+		86F540E813FD37450049338C /* SLAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAppController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		860E695213FD303900E94760 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				860E695A13FD303900E94760 /* Cocoa.framework in Frameworks */,
+				860E697813FD30CF00E94760 /* MCPKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		860E694A13FD303900E94760 = {
+			isa = PBXGroup;
+			children = (
+				860E695F13FD303900E94760 /* SequelLogin */,
+				860E695813FD303900E94760 /* Frameworks */,
+				860E695613FD303900E94760 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		860E695613FD303900E94760 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				860E695513FD303900E94760 /* SequelLogin.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		860E695813FD303900E94760 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				860E697713FD30CF00E94760 /* MCPKit.framework */,
+				860E695913FD303900E94760 /* Cocoa.framework */,
+				860E695B13FD303900E94760 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		860E695B13FD303900E94760 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				860E695C13FD303900E94760 /* AppKit.framework */,
+				860E695D13FD303900E94760 /* CoreData.framework */,
+				860E695E13FD303900E94760 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		860E695F13FD303900E94760 /* SequelLogin */ = {
+			isa = PBXGroup;
+			children = (
+				86F540E013FD371F0049338C /* Controllers */,
+				86F540E313FD371F0049338C /* Interfaces */,
+				86F540E413FD371F0049338C /* Models */,
+				86F540E513FD371F0049338C /* Protocols */,
+				860E696B13FD303900E94760 /* SequelLoginAppDelegate.h */,
+				860E696C13FD303900E94760 /* SequelLoginAppDelegate.m */,
+				860E696E13FD303900E94760 /* MainMenu.xib */,
+				860E696013FD303900E94760 /* Supporting Files */,
+			);
+			path = SequelLogin;
+			sourceTree = "<group>";
+		};
+		860E696013FD303900E94760 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				860E696113FD303900E94760 /* SequelLogin-Info.plist */,
+				860E696213FD303900E94760 /* InfoPlist.strings */,
+				860E696513FD303900E94760 /* SequelLogin-Prefix.pch */,
+				860E696613FD303900E94760 /* main.m */,
+				860E696813FD303900E94760 /* Credits.rtf */,
+				860E697A13FD310F00E94760 /* appicon.icns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86F540E013FD371F0049338C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				86F540E113FD371F0049338C /* Views */,
+				86F540E213FD371F0049338C /* Windows */,
+				86F540E713FD37450049338C /* SLAppController.h */,
+				86F540E813FD37450049338C /* SLAppController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		86F540E113FD371F0049338C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		86F540E213FD371F0049338C /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Windows;
+			sourceTree = "<group>";
+		};
+		86F540E313FD371F0049338C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		86F540E413FD371F0049338C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		86F540E513FD371F0049338C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		860E695413FD303900E94760 /* SequelLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 860E697313FD303900E94760 /* Build configuration list for PBXNativeTarget "SequelLogin" */;
+			buildPhases = (
+				860E697613FD304700E94760 /* CopyFiles */,
+				860E695113FD303900E94760 /* Sources */,
+				860E695213FD303900E94760 /* Frameworks */,
+				860E695313FD303900E94760 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SequelLogin;
+			productName = SequelLogin;
+			productReference = 860E695513FD303900E94760 /* SequelLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		860E694C13FD303900E94760 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = L0CKnL0aD7;
+			};
+			buildConfigurationList = 860E694F13FD303900E94760 /* Build configuration list for PBXProject "SequelLogin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 860E694A13FD303900E94760;
+			productRefGroup = 860E695613FD303900E94760 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				860E695413FD303900E94760 /* SequelLogin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		860E695313FD303900E94760 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				860E696413FD303900E94760 /* InfoPlist.strings in Resources */,
+				860E696A13FD303900E94760 /* Credits.rtf in Resources */,
+				860E697013FD303900E94760 /* MainMenu.xib in Resources */,
+				860E697B13FD310F00E94760 /* appicon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		860E695113FD303900E94760 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				860E696713FD303900E94760 /* main.m in Sources */,
+				860E696D13FD303900E94760 /* SequelLoginAppDelegate.m in Sources */,
+				86F540E913FD37450049338C /* SLAppController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		860E696213FD303900E94760 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				860E696313FD303900E94760 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		860E696813FD303900E94760 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				860E696913FD303900E94760 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		860E696E13FD303900E94760 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				860E696F13FD303900E94760 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		860E697113FD303900E94760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		860E697213FD303900E94760 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		860E697413FD303900E94760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SequelLogin/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SequelLogin/SequelLogin-Prefix.pch";
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "SequelLogin/SequelLogin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		860E697513FD303900E94760 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SequelLogin/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SequelLogin/SequelLogin-Prefix.pch";
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "SequelLogin/SequelLogin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		860E694F13FD303900E94760 /* Build configuration list for PBXProject "SequelLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				860E697113FD303900E94760 /* Debug */,
+				860E697213FD303900E94760 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		860E697313FD303900E94760 /* Build configuration list for PBXNativeTarget "SequelLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				860E697413FD303900E94760 /* Debug */,
+				860E697513FD303900E94760 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 860E694C13FD303900E94760 /* Project object */;
+}
