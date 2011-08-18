@@ -75,6 +75,7 @@
 		86F5411213FD6E240049338C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		86F5411613FD73500049338C /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
 		86F5411713FD73500049338C /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		86F5411B13FD7B440049338C /* DatabaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +213,7 @@
 		86F540E513FD371F0049338C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				86F5411B13FD7B440049338C /* DatabaseProtocol.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
