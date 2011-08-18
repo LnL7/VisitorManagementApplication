@@ -27,6 +27,7 @@
 		86F5411013FD6C670049338C /* DataWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5410F13FD6C670049338C /* DataWindowController.m */; };
 		86F5411413FD6E240049338C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5411213FD6E240049338C /* LoginViewController.m */; };
 		86F5411913FD73510049338C /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5411713FD73500049338C /* EventViewController.m */; };
+		86F5411E13FD7C660049338C /* SLDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5411D13FD7C660049338C /* SLDatabase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,6 +77,8 @@
 		86F5411613FD73500049338C /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
 		86F5411713FD73500049338C /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
 		86F5411B13FD7B440049338C /* DatabaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseProtocol.h; sourceTree = "<group>"; };
+		86F5411C13FD7C660049338C /* SLDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDatabase.h; sourceTree = "<group>"; };
+		86F5411D13FD7C660049338C /* SLDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDatabase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +209,8 @@
 		86F540E413FD371F0049338C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				86F5411C13FD7C660049338C /* SLDatabase.h */,
+				86F5411D13FD7C660049338C /* SLDatabase.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 				86F5411013FD6C670049338C /* DataWindowController.m in Sources */,
 				86F5411413FD6E240049338C /* LoginViewController.m in Sources */,
 				86F5411913FD73510049338C /* EventViewController.m in Sources */,
+				86F5411E13FD7C660049338C /* SLDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

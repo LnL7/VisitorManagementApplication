@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SLDatabase.h"
 
 
 @protocol DatabaseProtocol <NSObject>
 
 #pragma mark Properties
-@property (copy) id db;
+@property (copy) SLDatabase *db;
 
 
 @end
