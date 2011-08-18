@@ -49,13 +49,22 @@
 {
 	_uWinCtl = [[UserWindowController alloc] initWithWindowNibName:@"UserWindowController"];
 	[_uWinCtl setSuperCtl:self];
+	[self giveDatabaseToController:_uWinCtl];
 	[_uWinCtl showWindow:self];
 }
 - (void)loadDataWindowController
 {
 	_dWinCtl = [[DataWindowController alloc] initWithWindowNibName:@"DataWindowController"];
 	[_dWinCtl setSuperCtl:self];
+	[self giveDatabaseToController:_dWinCtl];
 	[_dWinCtl showWindow:self];
+}
+- (void)giveDatabaseToController:(id<DatabaseProtocol>)ctl
+{
+	if( _db )
+	{
+		[ctl setDb:_db];
+	}
 }
 
 

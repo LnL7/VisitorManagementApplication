@@ -29,6 +29,7 @@
 - (void)loadConnectWindowController;
 - (void)loadUserWindowController;
 - (void)loadDataWindowController;
+- (void)giveDatabaseToController:(id<DatabaseProtocol>)ctl;
 
 
 @end
