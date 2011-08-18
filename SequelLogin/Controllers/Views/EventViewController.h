@@ -1,5 +1,5 @@
 //
-//  DataWindowController.h
+//  EventViewController.h
 //  SequelLogin
 //
 //  Created by LnL on 18/08/11.
@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface DataWindowController : NSWindowController
+@interface EventViewController : NSViewController
 {
 @private
 #pragma mark Outlets

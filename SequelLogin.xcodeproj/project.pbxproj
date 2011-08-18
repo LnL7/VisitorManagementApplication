@@ -25,6 +25,8 @@
 		86F5410A13FD6AEA0049338C /* ConnectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5410913FD6AEA0049338C /* ConnectWindowController.m */; };
 		86F5410D13FD6BAD0049338C /* UserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5410C13FD6BAD0049338C /* UserWindowController.m */; };
 		86F5411013FD6C670049338C /* DataWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5410F13FD6C670049338C /* DataWindowController.m */; };
+		86F5411413FD6E240049338C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5411213FD6E240049338C /* LoginViewController.m */; };
+		86F5411913FD73510049338C /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5411713FD73500049338C /* EventViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +71,10 @@
 		86F5410C13FD6BAD0049338C /* UserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserWindowController.m; sourceTree = "<group>"; };
 		86F5410E13FD6C670049338C /* DataWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataWindowController.h; sourceTree = "<group>"; };
 		86F5410F13FD6C670049338C /* DataWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataWindowController.m; sourceTree = "<group>"; };
+		86F5411113FD6E240049338C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		86F5411213FD6E240049338C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		86F5411613FD73500049338C /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		86F5411713FD73500049338C /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,10 @@
 		86F540E113FD371F0049338C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				86F5411113FD6E240049338C /* LoginViewController.h */,
+				86F5411213FD6E240049338C /* LoginViewController.m */,
+				86F5411613FD73500049338C /* EventViewController.h */,
+				86F5411713FD73500049338C /* EventViewController.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,6 +292,8 @@
 				86F5410A13FD6AEA0049338C /* ConnectWindowController.m in Sources */,
 				86F5410D13FD6BAD0049338C /* UserWindowController.m in Sources */,
 				86F5411013FD6C670049338C /* DataWindowController.m in Sources */,
+				86F5411413FD6E240049338C /* LoginViewController.m in Sources */,
+				86F5411913FD73510049338C /* EventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
