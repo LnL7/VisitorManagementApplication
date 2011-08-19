@@ -72,6 +72,7 @@
 - (void)loadLoginView
 {
 	_lViewCtl = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+	[_lViewCtl setSuperCtl:self];
 	[_lViewCtl setDb:_db];
 	[[_lViewCtl view] setFrame:[_content frame]];
 	[[[self window] contentView] addSubview:[_lViewCtl view]];
@@ -79,6 +80,7 @@
 - (void)loadEventView
 {
 	_eViewCtl = [[EventViewController alloc] initWithNibName:@"EventViewController" bundle:nil];
+	[_eViewCtl setSuperCtl:self];
 	[_eViewCtl setDb:_db];
 	[[_eViewCtl view] setFrame:[_content bounds]];
 	[[[self window] contentView] addSubview:[_eViewCtl view]];
@@ -97,7 +99,7 @@
 {
 	if( _usr )
 	{
-		NSLog(@"%@", [_usr name_str]);
+		NSLog(@"User: %@", [_usr name_str]);
 	}
 }
 

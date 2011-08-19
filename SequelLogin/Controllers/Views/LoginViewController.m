@@ -40,8 +40,7 @@
 	{
 		if( [self userCheckData:a] )
 		{
-			[_infoField setStringValue:
-			 @"Login Successful."];
+			[_infoField setStringValue:@"Login Successful."];
 			// Successful User Login
 			[_superCtl setUsr:_usr];
 			[_superCtl unloadView:self];
