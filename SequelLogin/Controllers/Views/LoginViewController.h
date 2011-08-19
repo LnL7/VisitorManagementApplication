@@ -43,6 +43,7 @@
 - (BOOL)userCheckData:(NSArray *)a;
 - (void)setValuesFromFieldsForLogin;
 - (void)setValuesFromFieldsForSubmit;
+- (void)insertUser;
 
 
 @end

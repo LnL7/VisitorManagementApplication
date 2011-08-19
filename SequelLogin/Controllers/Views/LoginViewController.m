@@ -40,7 +40,11 @@
 	{
 		if( [self userCheckData:a] )
 		{
-			NSLog(@"Admin: %d", [_usr admin_bool]);
+			[_infoField setStringValue:
+			 @"Login Successful."];
+			// Successful User Login
+			[_superCtl setUsr:_usr];
+			[_superCtl unloadView:self];
 		}
 		else
 		{
@@ -57,6 +61,7 @@
 - (IBAction)submitPressed:(id)sender
 {
 	[self setValuesFromFieldsForSubmit];
+	[self insertUser];
 }
 
 
@@ -105,6 +110,38 @@
 	[_usr setPhone_str:[_phoneField stringValue]];
 	[_usr setMobile_str:[_mobileField stringValue]];
 	[_usr setEmail_str:[_emailField stringValue]];
+}
+- (void)insertUser
+{
+	NSArray *a = [self userGetData];
+	if( ! a )
+	{
+		[_infoField setStringValue:@"Creating User."];
+		// Create User
+		NSString *q = [NSString stringWithFormat:@"INSERT INTO user_list (name_str,password_str,street_str,street_num,city_str,zip_num,region_str,country_str,phone_str,mobile_str,email_str,admin_bool) VALUES ('%@','%@','%@',%d,'%@',%d,'%@','%@','%@','%@','%@',0)",
+									 [_usr name_str],
+									 [_usr password_str],
+									 [_usr street_str],
+									 [_usr street_num],
+									 [_usr city_str],
+									 [_usr zip_num],
+									 [_usr region_str],
+									 [_usr country_str],
+									 [_usr phone_str],
+									 [_usr mobile_str],
+									 [_usr email_str]
+									 ];
+		[_db query:q];
+		[self loginPressed:self];
+	}
+	else
+	{
+		[_infoField setStringValue:@"User already exists with that name."];
+		if( [self userCheckData:a] )
+		{
+			[self loginPressed:self];
+		}
+	}
 }
 
 

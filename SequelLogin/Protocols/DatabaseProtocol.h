@@ -23,6 +23,7 @@
 @property (retain) SLUser *usr;
 #pragma mark Methods
 - (void)unloadWindow:(id)ctl;
+- (void)unloadView:(id)ctl;
 
 
 @end

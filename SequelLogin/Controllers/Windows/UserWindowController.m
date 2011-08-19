@@ -93,6 +93,13 @@
 	[[_eViewCtl view] removeFromSuperview];
 	[_eViewCtl release];
 }
+- (void)unloadView:(id)ctl
+{
+	if( _usr )
+	{
+		NSLog(@"%@", [_usr name_str]);
+	}
+}
 
 
 @end

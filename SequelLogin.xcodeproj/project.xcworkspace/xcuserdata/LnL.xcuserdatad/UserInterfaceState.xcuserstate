@@ -160,7 +160,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>11</integer>
+					<integer>24</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -272,7 +272,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>11</integer>
+					<integer>24</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -609,7 +609,7 @@
 			</array>
 		</dict>
 		<string>ConsoleArea</string>
-		<real>327</real>
+		<real>511</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -708,7 +708,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>327</real>
+		<real>511</real>
 		<integer>1</integer>
 		<dict>
 			<key>$class</key>
@@ -948,7 +948,7 @@
 		<string>FileDataType</string>
 		<string>DocumentURL</string>
 		<string>DocumentExtensionIdentifier</string>
-		<string>-setValuesFromFieldsForLogin</string>
+		<string>-insertUser</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1152,9 +1152,9 @@
 		<string>PrimaryDocumentTimestamp</string>
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>335464340.69831002</real>
-		<string>{1619, 887}</string>
-		<string>{1966, 0}</string>
+		<real>335467158.04558301</real>
+		<string>{1413, 1066}</string>
+		<string>{2793, 0}</string>
 		<string>LoginViewController.m</string>
 		<string>public.objective-c-source</string>
 		<dict>
@@ -1199,7 +1199,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {840, 364}}</string>
+		<string>{{0, 0}, {1024, 445}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1524,9 +1524,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335464340.69808602</real>
-		<string>{327, 415}</string>
-		<string>{365, 0}</string>
+		<real>335467158.04538798</real>
+		<string>{132, 318}</string>
+		<string>{191, 69}</string>
 		<string>public.c-header</string>
 		<dict>
 			<key>$class</key>
@@ -1560,8 +1560,8 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {840, 517}}</string>
-		<real>0.29400387406349182</real>
+		<string>{{0, 0}, {1024, 639}}</string>
+		<real>0.30203443765640259</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4154,7 +4154,7 @@
 				<integer>378</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Models/SLUser.m</string>
+		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Controllers/Windows/UserWindowController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4172,7 +4172,7 @@
 				<integer>380</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Models/SLUser.h</string>
+		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Controllers/Windows/UserWindowController.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4190,7 +4190,7 @@
 				<integer>382</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Controllers/SLAppController.m</string>
+		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Protocols/DatabaseProtocol.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4208,7 +4208,7 @@
 				<integer>384</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Controllers/SLAppController.h</string>
+		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Models/SLUser.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4226,7 +4226,7 @@
 				<integer>386</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Controllers/Windows/ConnectWindowController.m</string>
+		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Models/SLUser.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4244,7 +4244,7 @@
 				<integer>388</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Controllers/Windows/ConnectWindowController.h</string>
+		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Controllers/SLAppController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4262,7 +4262,7 @@
 				<integer>390</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Controllers/Windows/UserWindowController.m</string>
+		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Controllers/SLAppController.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4280,7 +4280,7 @@
 				<integer>392</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Controllers/Windows/UserWindowController.h</string>
+		<string>file://localhost/Users/LnL/Desktop/gip-project/SequelLogin/SequelLogin/Controllers/Windows/ConnectWindowController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5935,9 +5935,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335458403.50059003</real>
-		<string>{210, 284}</string>
-		<string>{211, 38}</string>
+		<real>335465318.67701501</real>
+		<string>{0, 522}</string>
+		<string>{514, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6605,9 +6605,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335464340.69728303</real>
-		<string>{327, 415}</string>
-		<string>{365, 0}</string>
+		<real>335467158.04464602</real>
+		<string>{132, 318}</string>
+		<string>{191, 69}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6940,9 +6940,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335460748.75180399</real>
-		<string>{161, 304}</string>
-		<string>{406, 0}</string>
+		<real>335466459.20427102</real>
+		<string>{696, 185}</string>
+		<string>{873, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -9321,7 +9321,7 @@
 		<string>IDEActivityReportStringSegmentType</string>
 		<string>IDEActivityReportStringSegmentTimeStyle</string>
 		<string>IDEActivityReportStringSegmentDate</string>
-		<string>Today at 18:31</string>
+		<string>Today at 19:18</string>
 		<real>3</real>
 		<dict>
 			<key>$class</key>
@@ -9330,7 +9330,7 @@
 				<integer>767</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>335464293.38567799</real>
+			<real>335467084.91814101</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
