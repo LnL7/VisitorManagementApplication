@@ -14,10 +14,15 @@
 {
 @private
 #pragma mark Outlets
+	IBOutlet NSButton *_eventsButton;
 #pragma mark Objects
 	id<DatabaseProtocol> _superCtl;
 	SLDatabase *_db;
 }
+
+
+#pragma mark Properties
+@property (assign) NSButton *eventsButton;
 
 
 @end

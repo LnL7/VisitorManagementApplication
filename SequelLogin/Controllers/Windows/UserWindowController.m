@@ -46,12 +46,18 @@
 			case 0:
 				[self loadLoginView];
 				[self unloadEventView];
+				_usr = nil;
 				_current = 0;
 				break;
 			case 1:
-				[self loadEventView];
-				[self unloadLoginView];
-				_current = 1;
+				if(_usr)
+				{
+					[self loadEventView];
+					[self unloadLoginView];
+					if( [_usr admin_bool] )
+					{ [[_eViewCtl eventsButton] setHidden:FALSE]; }
+					_current = 1;
+				}
 				break;
 				
 			default:
@@ -97,12 +103,9 @@
 }
 - (void)unloadView:(id)ctl
 {
-	if( _usr )
-	{
-		// Switch to Events
-		[_segm setSelectedSegment:1];
-		[self segmPressed:_segm];
-	}
+	// Switch to Events
+	[_segm setSelectedSegment:1];
+	[self segmPressed:_segm];
 }
 
 

@@ -33,6 +33,7 @@
 #pragma mark Synthesizers
 @synthesize superCtl = _superCtl;
 @synthesize db = _db;
+@synthesize eventsButton = _eventsButton;
 
 
 @end
