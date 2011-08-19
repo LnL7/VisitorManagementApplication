@@ -25,6 +25,8 @@
 {
 	[super windowDidLoad];
 	// Init objects here.
+	_current = -1;
+	[self segmPressed:_segm];
 }
 #pragma mark Destructors
 - (void)dealloc
@@ -34,9 +36,61 @@
 }
 
 
+#pragma mark Actions
+- (IBAction)segmPressed:(id)sender
+{
+	if( ! _current == [sender selectedSegment] )
+	{
+		switch( [sender selectedSegment] )
+		{
+			case 0:
+				[self loadLoginView];
+				[self unloadEventView];
+				_current = 0;
+				break;
+			case 1:
+				[self loadEventView];
+				[self unloadLoginView];
+				_current = 1;
+				break;
+				
+			default:
+				NSLog(@"Bad Segment!");
+				break;
+		}
+	}
+}
+
+
 #pragma mark Synthesizers
 @synthesize superCtl = _superCtl;
 @synthesize db = _db;
+@synthesize usr = _usr;
+
+
+#pragma mark Methdos
+- (void)loadLoginView
+{
+	_lViewCtl = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+	[[_lViewCtl view] setFrame:[_content frame]];
+	[[[self window] contentView] addSubview:[_lViewCtl view]];
+}
+- (void)loadEventView
+{
+	_eViewCtl = [[EventViewController alloc] initWithNibName:@"EventViewController" bundle:nil];
+	[[_eViewCtl view] setFrame:[_content bounds]];
+	[[[self window] contentView] addSubview:[_eViewCtl view]];
+}
+- (void)unloadLoginView
+{
+	[[_lViewCtl view] removeFromSuperview];
+	[_lViewCtl release];
+}
+- (void)unloadEventView
+{
+	[[_eViewCtl view] removeFromSuperview];
+	[_eViewCtl release];
+}
 
 
 @end

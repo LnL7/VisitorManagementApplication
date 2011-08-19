@@ -29,7 +29,6 @@
 - (void)loadConnectWindowController;
 - (void)loadUserWindowController;
 - (void)loadDataWindowController;
-- (void)unloadWindow:(id)ctl;
 - (void)unloadConnectWindowController;
 - (void)unloadUserWindowController;
 - (void)unloadDataWindowController;

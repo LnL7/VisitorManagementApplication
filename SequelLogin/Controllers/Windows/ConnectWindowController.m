@@ -45,6 +45,7 @@
 	{
 		//[_db log];
 		[_superCtl setDb:_db];
+		[_superCtl unloadWindow:self];
 	}
 	else { [_errorField setStringValue:error]; }
 }

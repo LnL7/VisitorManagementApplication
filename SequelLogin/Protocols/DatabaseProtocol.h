@@ -12,9 +12,14 @@
 
 @protocol DatabaseProtocol <NSObject>
 
+@required
 #pragma mark Properties
 @property (assign) id<DatabaseProtocol> superCtl;
-@property (assign) SLDatabase *db;
+@property (retain) SLDatabase *db;
+
+@optional
+#pragma mark Methods
+- (void)unloadWindow:(id)ctl;
 
 
 @end
