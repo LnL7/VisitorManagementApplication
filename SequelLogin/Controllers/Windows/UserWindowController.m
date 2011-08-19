@@ -99,7 +99,9 @@
 {
 	if( _usr )
 	{
-		NSLog(@"User: %@", [_usr name_str]);
+		// Switch to Events
+		[_segm setSelectedSegment:1];
+		[self segmPressed:_segm];
 	}
 }
 
