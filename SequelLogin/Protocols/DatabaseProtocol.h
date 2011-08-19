@@ -14,7 +14,7 @@
 
 #pragma mark Properties
 @property (assign) id<DatabaseProtocol> superCtl;
-@property (copy) SLDatabase *db;
+@property (assign) SLDatabase *db;
 
 
 @end

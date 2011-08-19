@@ -49,22 +49,48 @@
 {
 	_uWinCtl = [[UserWindowController alloc] initWithWindowNibName:@"UserWindowController"];
 	[_uWinCtl setSuperCtl:self];
-	[self giveDatabaseToController:_uWinCtl];
+	[_uWinCtl setDb:_db];
 	[_uWinCtl showWindow:self];
 }
 - (void)loadDataWindowController
 {
 	_dWinCtl = [[DataWindowController alloc] initWithWindowNibName:@"DataWindowController"];
 	[_dWinCtl setSuperCtl:self];
-	[self giveDatabaseToController:_dWinCtl];
+	[_dWinCtl setDb:_db];
 	[_dWinCtl showWindow:self];
 }
-- (void)giveDatabaseToController:(id<DatabaseProtocol>)ctl
+- (void)unloadWindow:(id)ctl
+{
+	if( [[ctl className] isEqualTo:@"ConnectWindowController"] )
+	{ [self unloadConnectWindowController]; }
+	else if( [[ctl className] isEqualTo:@"UserWindowController"] )
+	{ [self unloadUserWindowController]; }
+	else if( [[ctl className] isEqualTo:@"DataWindowController"] )
+	{ [self unloadDataWindowController]; }
+	else { NSLog(@"bad windowController Class"); }
+}
+- (void)unloadConnectWindowController
 {
 	if( _db )
 	{
-		[ctl setDb:_db];
+		[[_cWinCtl window] performClose:self];
+		[_cWinCtl release];
+		[self loadUserWindowController];
 	}
+	else { NSLog(@"No Database Connection"); }
+}
+- (void)unloadUserWindowController
+{
+	if( true )
+	{
+		[[_uWinCtl window] performClose:self];
+		[_uWinCtl release];
+	}
+}
+- (void)unloadDataWindowController
+{
+	[[_dWinCtl window] performClose:self];
+	[_dWinCtl release];
 }
 
 
