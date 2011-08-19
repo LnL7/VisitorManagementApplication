@@ -18,20 +18,94 @@
 	if (self)
 	{
 		// Init objects here.
+		_usr = [[SLUser alloc] init];
 	}
 	return self;
 }
 #pragma mark Destructors
 - (void)dealloc
 {
+	[_usr release];
 	// Destruct objects here.
 	[super dealloc];
+}
+
+
+#pragma mark Actions
+- (IBAction)loginPressed:(id)sender
+{
+	[self setValuesFromFieldsForLogin];
+	NSArray *a = [self userGetData];
+	if( a )
+	{
+		if( [self userCheckData:a] )
+		{
+			NSLog(@"Admin: %d", [_usr admin_bool]);
+		}
+		else
+		{
+			[_infoField setStringValue:
+			 @"Incorrect password for the specified user."];
+		}
+	}
+	else
+	{
+		[_infoField setStringValue:
+		 @"This user doesn't exist, please fill in all information an press submit. Note: Only the Name field is strictly required."];
+	}
+}
+- (IBAction)submitPressed:(id)sender
+{
+	[self setValuesFromFieldsForSubmit];
 }
 
 
 #pragma mark Synthesizers
 @synthesize superCtl = _superCtl;
 @synthesize db = _db;
+@synthesize usr = _usr;
+
+
+#pragma mark Methdos
+- (NSArray *)userGetData
+{
+	NSString *q = [NSString stringWithFormat:
+								 @"SELECT name_str,password_str,admin_bool FROM user_list WHERE name_str='%@';", [_usr name_str] ];
+	MCPResult *r = [_db query:q];
+	NSArray *a = [r fetchRowAsArray];
+	if( [[_usr name_str] isEqualTo:[a objectAtIndex:0]] )
+	{ return a; }
+	return nil;
+}
+- (BOOL)userCheckData:(NSArray *)a
+{
+	if( [[_usr password_str] isEqualTo:[a objectAtIndex:1]] )
+	{
+		// Set admin flag
+		[_usr setAdmin_bool:[[a objectAtIndex:2] boolValue]];
+		return TRUE;
+	}
+	return FALSE;
+}
+- (void)setValuesFromFieldsForLogin
+{
+	[_usr setName_str:[_nameField stringValue]];
+	[_usr setPassword_str:[_passwordField stringValue]];
+}
+- (void)setValuesFromFieldsForSubmit
+{
+	[_usr setName_str:[_nameField stringValue]];
+	[_usr setPassword_str:[_passwordField stringValue]];
+	[_usr setStreet_str:[_streetNameField stringValue]];
+	[_usr setStreet_num:[_streetNumberField intValue]];
+	[_usr setCity_str:[_cityField stringValue]];
+	[_usr setZip_num:[_zipCodeField intValue]];
+	[_usr setRegion_str:[_regionField stringValue]];
+	[_usr setCountry_str:[_countryField stringValue]];
+	[_usr setPhone_str:[_phoneField stringValue]];
+	[_usr setMobile_str:[_mobileField stringValue]];
+	[_usr setEmail_str:[_emailField stringValue]];
+}
 
 
 @end

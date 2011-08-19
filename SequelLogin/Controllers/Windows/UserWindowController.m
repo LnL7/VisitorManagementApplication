@@ -72,12 +72,14 @@
 - (void)loadLoginView
 {
 	_lViewCtl = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+	[_lViewCtl setDb:_db];
 	[[_lViewCtl view] setFrame:[_content frame]];
 	[[[self window] contentView] addSubview:[_lViewCtl view]];
 }
 - (void)loadEventView
 {
 	_eViewCtl = [[EventViewController alloc] initWithNibName:@"EventViewController" bundle:nil];
+	[_eViewCtl setDb:_db];
 	[[_eViewCtl view] setFrame:[_content bounds]];
 	[[[self window] contentView] addSubview:[_eViewCtl view]];
 }

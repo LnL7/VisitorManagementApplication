@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SLDatabase.h"
+#import "SLUser.h"
 
 
 @protocol DatabaseProtocol <NSObject>
@@ -18,6 +19,8 @@
 @property (retain) SLDatabase *db;
 
 @optional
+#pragma mark Properties
+@property (retain) SLUser *usr;
 #pragma mark Methods
 - (void)unloadWindow:(id)ctl;
 

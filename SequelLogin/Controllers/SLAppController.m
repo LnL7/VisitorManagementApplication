@@ -73,6 +73,11 @@
 {
 	if( _db )
 	{
+		// Alert
+		NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+		[alert setMessageText:@"Connection Successful."];
+		[alert runModal];
+		// Close
 		[[_cWinCtl window] performClose:self];
 		[_cWinCtl release];
 		[self loadUserWindowController];
