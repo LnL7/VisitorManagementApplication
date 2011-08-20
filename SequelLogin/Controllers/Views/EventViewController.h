@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "DatabaseProtocol.h"
+#import "SLEvent.h"
 
 
 @interface EventViewController : NSViewController <DatabaseProtocol>
@@ -23,6 +24,7 @@
 	id<DatabaseProtocol> _superCtl;
 	SLDatabase *_db;
 	SLUser *_usr;
+	SLEvent *_event;
 }
 
 
@@ -42,6 +44,9 @@
 - (NSArray *)fetchTypes;
 - (NSArray *)fetchUsers;
 - (void)setItems:(NSArray *)a ForPop:(NSPopUpButton *)pop;
+- (int)idForUser:(NSString *)u;
+- (void)createEvent;
+- (void)endEvent;
 
 
 @end

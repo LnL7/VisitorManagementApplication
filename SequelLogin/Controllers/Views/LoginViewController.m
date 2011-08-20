@@ -74,19 +74,20 @@
 - (NSArray *)userGetData
 {
 	NSString *q = [NSString stringWithFormat:
-								 @"SELECT name_str,password_str,admin_bool FROM user_list WHERE name_str='%@';", [_usr name_str] ];
+								 @"SELECT id_num,name_str,password_str,admin_bool FROM user_list WHERE name_str='%@';", [_usr name_str] ];
 	MCPResult *r = [_db query:q];
 	NSArray *a = [r fetchRowAsArray];
-	if( [[_usr name_str] isEqualTo:[a objectAtIndex:0]] )
+	if( [[_usr name_str] isEqualTo:[a objectAtIndex:1]] )
 	{ return a; }
 	return nil;
 }
 - (BOOL)userCheckData:(NSArray *)a
 {
-	if( [[_usr password_str] isEqualTo:[a objectAtIndex:1]] )
+	if( [[_usr password_str] isEqualTo:[a objectAtIndex:2]] )
 	{
-		// Set admin flag
-		[_usr setAdmin_bool:[[a objectAtIndex:2] boolValue]];
+		// Set id & admin flag
+		[_usr setId_num:[[a objectAtIndex:0] intValue]];
+		[_usr setAdmin_bool:[[a objectAtIndex:3] boolValue]];
 		return TRUE;
 	}
 	return FALSE;
