@@ -56,7 +56,6 @@
 						<string key="NSFrame">{{399, 18}, {152, 25}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="244825054">
 							<int key="NSCellFlags">-2080244224</int>
@@ -368,7 +367,6 @@
 								</object>
 								<reference key="NSMenuFont" ref="93962547"/>
 							</object>
-							<int key="NSSelectedIndex">-1</int>
 							<int key="NSPreferredEdge">1</int>
 							<bool key="NSUsesItemFromMenu">YES</bool>
 							<bool key="NSAltersState">YES</bool>
@@ -395,12 +393,84 @@
 					<int key="connectionID">60</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">typeChanged:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="656383985"/>
+					</object>
+					<int key="connectionID">64</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">withUserChanged:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="736595499"/>
+					</object>
+					<int key="connectionID">65</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">inPressed:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="965122001"/>
+					</object>
+					<int key="connectionID">66</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">outPressed:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="769922357"/>
+					</object>
+					<int key="connectionID">67</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">eventsButton</string>
+						<string key="label">_typePop</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="656383985"/>
+					</object>
+					<int key="connectionID">69</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">_withUserPop</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="736595499"/>
+					</object>
+					<int key="connectionID">70</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">_infoField</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="885256070"/>
+					</object>
+					<int key="connectionID">73</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">_eventInfoField</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="435564598"/>
+					</object>
+					<int key="connectionID">74</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">_eventsButton</string>
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="900863287"/>
 					</object>
-					<int key="connectionID">63</int>
+					<int key="connectionID">75</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">eventPressed:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="900863287"/>
+					</object>
+					<int key="connectionID">76</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -704,7 +774,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">63</int>
+			<int key="maxID">76</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -712,15 +782,110 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">EventViewController</string>
 					<string key="superclassName">NSViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>eventPressed:</string>
+							<string>inPressed:</string>
+							<string>outPressed:</string>
+							<string>typeChanged:</string>
+							<string>withUserChanged:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>eventPressed:</string>
+							<string>inPressed:</string>
+							<string>outPressed:</string>
+							<string>typeChanged:</string>
+							<string>withUserChanged:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">eventPressed:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">inPressed:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">outPressed:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">typeChanged:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">withUserChanged:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+						</object>
+					</object>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">eventsButton</string>
-						<string key="NS.object.0">NSButton</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>_eventInfoField</string>
+							<string>_eventsButton</string>
+							<string>_infoField</string>
+							<string>_typePop</string>
+							<string>_withUserPop</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>NSTextField</string>
+							<string>NSButton</string>
+							<string>NSTextField</string>
+							<string>NSPopUpButton</string>
+							<string>NSPopUpButton</string>
+						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">eventsButton</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">eventsButton</string>
-							<string key="candidateClassName">NSButton</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>_eventInfoField</string>
+							<string>_eventsButton</string>
+							<string>_infoField</string>
+							<string>_typePop</string>
+							<string>_withUserPop</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_eventInfoField</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_eventsButton</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_infoField</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_typePop</string>
+								<string key="candidateClassName">NSPopUpButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_withUserPop</string>
+								<string key="candidateClassName">NSPopUpButton</string>
+							</object>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">

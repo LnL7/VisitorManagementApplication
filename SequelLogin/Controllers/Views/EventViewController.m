@@ -30,10 +30,50 @@
 }
 
 
+#pragma mark Actions
+- (IBAction)typeChanged:(id)sender
+{
+	
+}
+- (IBAction)withUserChanged:(id)sender
+{
+	
+}
+- (IBAction)inPressed:(id)sender
+{
+	
+}
+- (IBAction)outPressed:(id)sender
+{
+	
+}
+- (IBAction)eventPressed:(id)sender
+{
+	[_db log];
+}
+
+
 #pragma mark Synthesizers
 @synthesize superCtl = _superCtl;
 @synthesize db = _db;
 @synthesize eventsButton = _eventsButton;
+
+
+#pragma mark Methdos
+- (NSArray *)fetchTypesForPop
+{
+	
+	return nil;
+}
+- (NSArray *)fetchUsersForPop
+{
+	
+	return nil;
+}
+- (void)setItems:(NSArray *)a ForPop:(NSPopUpButton *)pop
+{
+	
+}
 
 
 @end

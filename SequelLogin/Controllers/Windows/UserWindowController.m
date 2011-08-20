@@ -58,6 +58,10 @@
 					{ [[_eViewCtl eventsButton] setHidden:FALSE]; }
 					_current = 1;
 				}
+				else
+				{
+					[sender setSelectedSegment:0];
+				}
 				break;
 				
 			default:
@@ -88,7 +92,7 @@
 	_eViewCtl = [[EventViewController alloc] initWithNibName:@"EventViewController" bundle:nil];
 	[_eViewCtl setSuperCtl:self];
 	[_eViewCtl setDb:_db];
-	[[_eViewCtl view] setFrame:[_content bounds]];
+	[[_eViewCtl view] setFrame:[_content frame]];
 	[[[self window] contentView] addSubview:[_eViewCtl view]];
 }
 - (void)unloadLoginView
