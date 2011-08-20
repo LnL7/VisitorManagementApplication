@@ -92,6 +92,7 @@
 	_eViewCtl = [[EventViewController alloc] initWithNibName:@"EventViewController" bundle:nil];
 	[_eViewCtl setSuperCtl:self];
 	[_eViewCtl setDb:_db];
+	[_eViewCtl setUsr:_usr];
 	[[_eViewCtl view] setFrame:[_content frame]];
 	[[[self window] contentView] addSubview:[_eViewCtl view]];
 }

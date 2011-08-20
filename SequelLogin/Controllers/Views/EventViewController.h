@@ -22,6 +22,7 @@
 #pragma mark Objects
 	id<DatabaseProtocol> _superCtl;
 	SLDatabase *_db;
+	SLUser *_usr;
 }
 
 
@@ -38,8 +39,8 @@
 
 
 #pragma mark Methdos
-- (NSArray *)fetchTypesForPop;
-- (NSArray *)fetchUsersForPop;
+- (NSArray *)fetchTypes;
+- (NSArray *)fetchUsers;
 - (void)setItems:(NSArray *)a ForPop:(NSPopUpButton *)pop;
 
 

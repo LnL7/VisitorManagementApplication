@@ -12,16 +12,16 @@
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<string>NSTextFieldCell</string>
-			<string>NSCustomObject</string>
 			<string>NSView</string>
-			<string>NSButton</string>
+			<string>NSCustomObject</string>
 			<string>NSWindowTemplate</string>
-			<string>NSBox</string>
 			<string>NSTextField</string>
+			<string>NSTextFieldCell</string>
 			<string>NSSecureTextField</string>
-			<string>NSSecureTextFieldCell</string>
 			<string>NSButtonCell</string>
+			<string>NSButton</string>
+			<string>NSSecureTextFieldCell</string>
+			<string>NSBox</string>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -146,7 +146,7 @@
 													<string key="NSColorName">controlColor</string>
 													<object class="NSColor" key="NSColor">
 														<int key="NSColorSpace">3</int>
-														<bytes key="NSWhite">MC42NjY2NjY2ODY1AA</bytes>
+														<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
 													</object>
 												</object>
 												<object class="NSColor" key="NSTextColor" id="7029293">
@@ -360,6 +360,7 @@
 											<string key="NSFrame">{{18, 10}, {118, 25}}</string>
 											<reference key="NSSuperview" ref="977428433"/>
 											<reference key="NSWindow"/>
+											<reference key="NSNextKeyView" ref="250353439"/>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSButtonCell" key="NSCell" id="971862280">
 												<int key="NSCellFlags">-2080244224</int>
@@ -374,7 +375,7 @@
 												<int key="NSButtonFlags">-2035007233</int>
 												<int key="NSButtonFlags2">163</int>
 												<string key="NSAlternateContents">Connecting</string>
-												<string key="NSKeyEquivalent"/>
+												<string type="base64-UTF8" key="NSKeyEquivalent">DQ</string>
 												<int key="NSPeriodicDelay">400</int>
 												<int key="NSPeriodicInterval">75</int>
 											</object>
@@ -414,6 +415,7 @@
 							<string key="NSFrame">{{17, 20}, {406, 14}}</string>
 							<reference key="NSSuperview" ref="277613814"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="888761483">
 								<int key="NSCellFlags">68288064</int>
