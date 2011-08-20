@@ -25,7 +25,8 @@
 - (void)awakeFromNib
 {
 	// Init from Database
-	[self fetchUsers];
+	[self setItems:[self fetchTypes] ForPop:_typePop];
+	[self setItems:[self fetchUsers] ForPop:_withUserPop];
 }
 #pragma mark Destructors
 - (void)dealloc
@@ -68,7 +69,15 @@
 #pragma mark Methdos
 - (NSArray *)fetchTypes
 {
-	
+	MCPResult *result = [_db query:@"SELECT name_str FROM event_types;"];
+	NSArray *row;
+	NSMutableArray *types = [[NSMutableArray alloc] init];
+	while(( row = [result fetchRowAsArray] ))
+	{
+		NSString *type = [row objectAtIndex:0];
+		[types addObject:type];
+	}
+	return types;
 	return nil;
 }
 - (NSArray *)fetchUsers
@@ -82,18 +91,17 @@
 		if( ! [name isEqualTo:[_usr name_str]] )
 		{
 			[users addObject:name];
-			NSLog(@"%@", name);
 		}
 	}
 	return users;
 }
 - (void)setItems:(NSArray *)a ForPop:(NSPopUpButton *)pop
 {
-//	[pop removeAllItems];
-//	for(NSString *name in a)
-//	{
-//    [pop addItemWithTitle:name];
-//	}
+	[pop removeAllItems];
+	for( NSString *n in a )
+	{
+    [pop addItemWithTitle:n];
+	}
 }
 
 
