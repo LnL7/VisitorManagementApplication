@@ -19,7 +19,6 @@
 	{
 		// Init objects here.
 		_event = [[SLEvent alloc] init];
-		[_event setVisitor_id:[_usr id_num]];
 	}
 	
 	return self;
@@ -52,13 +51,17 @@
 }
 - (IBAction)inPressed:(id)sender
 {
-	NSLog(@"%@", [_event type_str]);
-	NSLog(@"%d", [_event host_id]);
-	NSLog(@"%@ -> %f", [NSDate date], [[NSDate date] timeIntervalSince1970]);
+	NSString *info = [_eventInfoField stringValue];
+	[_event setInfo_str:info];
+	[_event setVisitor_id:[_usr id_num]];
+	[_event setTime_start:[NSDate date]];
+	[self createEvent];
 }
 - (IBAction)outPressed:(id)sender
 {
-	
+	NSLog(@"%@", [_event type_str]);
+	NSLog(@"%d", [_event host_id]);
+	NSLog(@"%@ -> %f", [_event time_start], [[_event time_start] timeIntervalSince1970]);
 }
 - (IBAction)eventPressed:(id)sender
 {
@@ -111,33 +114,33 @@
 	}
 }
 - (int)idForUser:(NSString *)u
-{
-	NSString *q = [NSString stringWithFormat:@"SELECT id_num FROM user_list WHERE name_str='%@'", u];
-	NSArray *id_num = [[_db query:q] fetchRowAsArray];
+{	
+	NSString *string = [NSString stringWithFormat:@"SELECT id_num FROM user_list WHERE name_str='%@'", u];
+	NSArray *id_num = [[_db query:string] fetchRowAsArray];
 	return [[id_num objectAtIndex:0] intValue];
 }
 - (void)createEvent
 {
-	NSString *type_id_q = [NSString stringWithFormat:@"SELECT id_num FROM event_types WHERE name_str='%@'", [_event type_str]];
-	int type_id = [[[[_db query:type_id_q] fetchRowAsArray] objectAtIndex:0] intValue];
-	float time_start = [[NSDate date] timeIntervalSince1970];
-	NSString *q = [NSString stringWithFormat:@"INSTERT INTO event_list (type_id,host_id,visitor_id,info_str,time_start) VALUES(%d,%d,%d,'%@',%f);",
-								 type_id,
-								 [_event host_id],
-								 [_event visitor_id],
-								 [_event info_str],
-								 time_start
-								 ];
-	[_db query:q];
+	NSString *string = [NSString stringWithFormat:@"INSERT INTO event_list ( type_str,host_id,visitor_id,info_str,time_start ) VALUES ( '%@',%d,%d,'%@',%f );",
+											[_event type_str],
+											[_event host_id],
+											[_event visitor_id],
+											[_event info_str],
+											[[_event time_start] timeIntervalSince1970]
+											];
+	[_db query:string];
+	if(( string = [[_db mysql] getLastErrorMessage] ))
+	{
+		[_infoField setStringValue:string];
+	}
+	else
+	{
+		[_infoField setStringValue:@"You are now Checked IN."];
+	}
 }
 - (void)endEvent
 {
-	float time_end = [[NSDate date] timeIntervalSince1970];
-	NSString *q = [NSString stringWithFormat:@"UPDATE event_list SET time_end=%f WHERE visitor_id=%d",
-								 time_end,
-								 [_usr id_num]
-								 ];
-	[_db query:q];
+	
 }
 
 

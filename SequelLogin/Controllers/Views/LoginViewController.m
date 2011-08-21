@@ -73,9 +73,9 @@
 #pragma mark Methdos
 - (NSArray *)userGetData
 {
-	NSString *q = [NSString stringWithFormat:
+	NSString *string = [NSString stringWithFormat:
 								 @"SELECT id_num,name_str,password_str,admin_bool FROM user_list WHERE name_str='%@';", [_usr name_str] ];
-	MCPResult *r = [_db query:q];
+	MCPResult *r = [_db query:string];
 	NSArray *a = [r fetchRowAsArray];
 	if( [[_usr name_str] isEqualTo:[a objectAtIndex:1]] )
 	{ return a; }
@@ -118,7 +118,7 @@
 	{
 		[_infoField setStringValue:@"Creating User."];
 		// Create User
-		NSString *q = [NSString stringWithFormat:@"INSERT INTO user_list (name_str,password_str,street_str,street_num,city_str,zip_num,region_str,country_str,phone_str,mobile_str,email_str,admin_bool) VALUES ('%@','%@','%@',%d,'%@',%d,'%@','%@','%@','%@','%@',0)",
+		NSString *string = [NSString stringWithFormat:@"INSERT INTO user_list (name_str,password_str,street_str,street_num,city_str,zip_num,region_str,country_str,phone_str,mobile_str,email_str,admin_bool) VALUES ('%@','%@','%@',%d,'%@',%d,'%@','%@','%@','%@','%@',0)",
 									 [_usr name_str],
 									 [_usr password_str],
 									 [_usr street_str],
@@ -131,7 +131,7 @@
 									 [_usr mobile_str],
 									 [_usr email_str]
 									 ];
-		[_db query:q];
+		[_db query:string];
 		[self loginPressed:self];
 	}
 	else
