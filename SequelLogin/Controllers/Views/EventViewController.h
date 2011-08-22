@@ -43,6 +43,7 @@
 #pragma mark Methdos
 - (NSArray *)fetchTypes;
 - (NSArray *)fetchUsers;
+- (NSArray *)fetchLastEvent;
 - (void)setItems:(NSArray *)a ForPop:(NSPopUpButton *)pop;
 - (int)idForUser:(NSString *)u;
 - (void)createEvent;

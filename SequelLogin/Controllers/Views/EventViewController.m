@@ -59,9 +59,9 @@
 }
 - (IBAction)outPressed:(id)sender
 {
-	NSLog(@"%@", [_event type_str]);
-	NSLog(@"%d", [_event host_id]);
-	NSLog(@"%@ -> %f", [_event time_start], [[_event time_start] timeIntervalSince1970]);
+	[_event setVisitor_id:[_usr id_num]];
+	[_event setTime_end:[NSDate date]];
+	[self endEvent];
 }
 - (IBAction)eventPressed:(id)sender
 {
@@ -105,6 +105,23 @@
 	}
 	return users;
 }
+- (NSArray *)fetchLastEvent
+{
+	NSArray *event;
+	NSString *string = [NSString stringWithFormat:@"SELECT id_num,time_start,time_end FROM event_list WHERE visitor_id=%d;",
+											[_event visitor_id]
+											];
+	event = [[_db query:string] fetchRowAsArray];
+	if(( string = [[_db mysql] getLastErrorMessage] ))
+	{
+		[_infoField setStringValue:string];
+	}
+	else
+	{
+		return event;
+	}
+	return nil;
+}
 - (void)setItems:(NSArray *)a ForPop:(NSPopUpButton *)pop
 {
 	[pop removeAllItems];
@@ -121,26 +138,60 @@
 }
 - (void)createEvent
 {
-	NSString *string = [NSString stringWithFormat:@"INSERT INTO event_list ( type_str,host_id,visitor_id,info_str,time_start ) VALUES ( '%@',%d,%d,'%@',%f );",
-											[_event type_str],
-											[_event host_id],
-											[_event visitor_id],
-											[_event info_str],
-											[[_event time_start] timeIntervalSince1970]
-											];
-	[_db query:string];
-	if(( string = [[_db mysql] getLastErrorMessage] ))
+	NSArray *last = [self fetchLastEvent];
+	if( ! last || ! [[last objectAtIndex:2] doubleValue] == -1.0f )
 	{
-		[_infoField setStringValue:string];
+		NSString *string = [NSString stringWithFormat:@"INSERT INTO event_list ( type_str,host_id,visitor_id,info_str,time_start ) VALUES ( '%@',%d,%d,'%@',%f );",
+												[_event type_str],
+												[_event host_id],
+												[_event visitor_id],
+												[_event info_str],
+												[[_event time_start] timeIntervalSince1970]
+												];
+		[_db query:string];
+		if(( string = [[_db mysql] getLastErrorMessage] ))
+		{
+			[_infoField setStringValue:string];
+		}
+		else
+		{
+			[_infoField setStringValue:@"You are now Checked IN."];
+		}
 	}
 	else
 	{
-		[_infoField setStringValue:@"You are now Checked IN."];
+		[_infoField setStringValue:@"You are already Checked IN, Check OUT before you Check IN."];
 	}
 }
 - (void)endEvent
 {
-	
+	NSArray *last = [self fetchLastEvent];
+	if( [[last objectAtIndex:2] doubleValue] == -1.0f )
+	{
+		NSString *string = [NSString stringWithFormat:@"UPDATE event_list SET time_end=%f WHERE id_num=%d;",
+												[[_event time_end] timeIntervalSince1970],
+												[[last objectAtIndex:0] intValue]
+												];
+		[_db query:string];
+		double lenght = [[_event time_end] timeIntervalSince1970] - [[last objectAtIndex:1] doubleValue];
+		string = [NSString stringWithFormat:@"UPDATE event_list SET time_length=%f WHERE id_num=%d;",
+												lenght,
+												[[last objectAtIndex:0] intValue]
+												];
+		[_db query:string];
+		if(( string = [[_db mysql] getLastErrorMessage] ))
+		{
+			[_infoField setStringValue:string];
+		}
+		else
+		{
+			[_infoField setStringValue:@"You are now Checked OUT."];
+		}
+	}
+	else
+	{
+		[_infoField setStringValue:@"You are already Checked OUT, Check IN before you Check OUT."];
+	}
 }
 
 
