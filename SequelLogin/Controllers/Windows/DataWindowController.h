@@ -8,27 +8,35 @@
 
 #import <Cocoa/Cocoa.h>
 #import "DatabaseProtocol.h"
+#import "SLEvent.h"
 
 
-@interface DataWindowController : NSWindowController <DatabaseProtocol, NSTableViewDelegate>
+@interface DataWindowController : NSWindowController <DatabaseProtocol, NSTableViewDataSource>
 {
 @private
 #pragma mark Outlets
-	IBOutlet NSTableView *table;
+	IBOutlet NSTableView *_table;
 #pragma mark Objects
+	NSMutableArray *_list;
 	id<DatabaseProtocol> _superCtl;
 	SLDatabase *_db;
 	SLUser *_usr;
 }
 
 
+#pragma mark Actions
+- (IBAction)fetchPressed:(id)sender;
+
+
 #pragma mark Methdos
-- (NSString *)fetchType;
-- (NSString *)fetchVisitor;
-- (NSString *)fetchHost;
-- (NSDate *)fetchStart;
-- (NSDate *)fetchEnd;
-- (NSString *)fetchLength;
+- (void)fetchEvents;
+- (SLEvent *)setEvent:(NSArray *)data;
+- (NSString *)setType:(NSArray *)data;
+- (NSString *)setVisitor:(NSArray *)data;
+- (NSString *)setHost:(NSArray *)data;
+- (NSDate *)setStart:(NSArray *)data;
+- (NSDate *)setEnd:(NSArray *)data;
+- (double)setLength:(NSArray *)data;
 
 
 @end

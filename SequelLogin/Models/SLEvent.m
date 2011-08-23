@@ -15,7 +15,8 @@
 - (id)init
 {
 	self = [super init];
-	if (self) {
+	if (self)
+	{
 		// Init objects here.
 	}
 	return self;
@@ -32,7 +33,9 @@
 @synthesize id_num = _id_num;
 @synthesize type_str = _type_str;
 @synthesize host_id = _host_id;
+@synthesize host_str = _host_str;
 @synthesize visitor_id = _visitor_id;
+@synthesize visitor_str = _visitor_str;
 @synthesize info_str = _info_str;
 @synthesize time_start = _time_start;
 @synthesize time_end = _time_end;

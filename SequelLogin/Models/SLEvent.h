@@ -16,11 +16,13 @@
 	NSInteger _id_num;
 	NSString *_type_str;
 	NSInteger _host_id;
+	NSString *_host_str;
 	NSInteger _visitor_id;
+	NSString *_visitor_str;
 	NSString *_info_str;
 	NSDate *_time_start;
 	NSDate *_time_end;
-	NSUInteger _time_length;
+	double _time_length;
 }
 
 
@@ -28,11 +30,13 @@
 @property (assign) NSInteger id_num;
 @property (copy) NSString *type_str;
 @property (assign) NSInteger host_id;
+@property (copy) NSString *host_str;
 @property (assign) NSInteger visitor_id;
+@property (copy) NSString *visitor_str;
 @property (copy) NSString *info_str;
 @property (copy) NSDate *time_start;
 @property (copy) NSDate *time_end;
-@property (assign) NSUInteger time_length;
+@property (assign) double time_length;
 
 
 @end
