@@ -19,6 +19,7 @@
 #pragma mark Objects
 	id<DatabaseProtocol> _superCtl;
 	SLDatabase *_db;
+	SLUser *_usr;
 	ConnectWindowController *_cWinCtl;
 	UserWindowController *_uWinCtl;
 	DataWindowController *_dWinCtl;

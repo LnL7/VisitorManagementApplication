@@ -33,9 +33,19 @@
 }
 
 
+#pragma mark Actions
+- (IBAction)showDataWindow:(id)sender
+{
+	[self loadDataWindowController];
+	[_dWinCtl setDb:_db];
+	[_dWinCtl setUsr:_usr];
+}
+
+
 #pragma mark Synthesizers
 @synthesize superCtl = _superCtl;
 @synthesize db = _db;
+@synthesize usr = _usr;
 
 
 #pragma mark Methods

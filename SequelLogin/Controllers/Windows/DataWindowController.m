@@ -37,6 +37,42 @@
 #pragma mark Synthesizers
 @synthesize superCtl = _superCtl;
 @synthesize db = _db;
+@synthesize usr = _usr;
+
+#pragma mark TableView
+
+
+#pragma mark Methdos
+- (NSString *)fetchType
+{
+	
+	return nil;
+}
+- (NSString *)fetchVisitor
+{
+	
+	return nil;
+}
+- (NSString *)fetchHost
+{
+	
+	return nil;
+}
+- (NSDate *)fetchStart
+{
+	
+	return nil;
+}
+- (NSDate *)fetchEnd
+{
+	
+	return nil;
+}
+- (NSString *)fetchLength
+{
+	
+	return nil;
+}
 
 
 @end

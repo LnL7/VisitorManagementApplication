@@ -10,14 +10,25 @@
 #import "DatabaseProtocol.h"
 
 
-@interface DataWindowController : NSWindowController <DatabaseProtocol>
+@interface DataWindowController : NSWindowController <DatabaseProtocol, NSTableViewDelegate>
 {
 @private
 #pragma mark Outlets
+	IBOutlet NSTableView *table;
 #pragma mark Objects
 	id<DatabaseProtocol> _superCtl;
 	SLDatabase *_db;
+	SLUser *_usr;
 }
+
+
+#pragma mark Methdos
+- (NSString *)fetchType;
+- (NSString *)fetchVisitor;
+- (NSString *)fetchHost;
+- (NSDate *)fetchStart;
+- (NSDate *)fetchEnd;
+- (NSString *)fetchLength;
 
 
 @end

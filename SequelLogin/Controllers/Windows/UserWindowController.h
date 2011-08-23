@@ -33,7 +33,6 @@
 #pragma mark Actions
 - (IBAction)segmPressed:(id)sender;
 
-
 #pragma mark Properties
 @property (retain) SLUser *usr;
 

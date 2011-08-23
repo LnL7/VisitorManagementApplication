@@ -19,6 +19,8 @@
 @property (retain) SLDatabase *db;
 
 @optional
+#pragma mark Actions
+- (IBAction)showDataWindow:(id)sender;
 #pragma mark Properties
 @property (retain) SLUser *usr;
 #pragma mark Methods

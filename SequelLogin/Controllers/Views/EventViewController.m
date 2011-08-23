@@ -65,7 +65,8 @@
 }
 - (IBAction)eventPressed:(id)sender
 {
-	[_db log];
+	[_superCtl setUsr:_usr];
+	[_superCtl showDataWindow:sender];
 }
 
 

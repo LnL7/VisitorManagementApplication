@@ -70,6 +70,11 @@
 		}
 	}
 }
+- (IBAction)showDataWindow:(id)sender
+{
+	[_superCtl setUsr:_usr];
+	[_superCtl showDataWindow:sender];
+}
 
 
 #pragma mark Synthesizers
