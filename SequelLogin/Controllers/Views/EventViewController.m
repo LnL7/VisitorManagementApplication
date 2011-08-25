@@ -109,7 +109,7 @@
 - (NSArray *)fetchLastEvent
 {
 	NSArray *event;
-	NSString *string = [NSString stringWithFormat:@"SELECT id_num,time_start,time_end FROM event_list WHERE visitor_id=%d;",
+	NSString *string = [NSString stringWithFormat:@"SELECT id_num,time_start,time_end FROM event_list WHERE visitor_id=%d ORDER BY time_start DESC LIMIT 0,1;",
 											[_event visitor_id]
 											];
 	event = [[_db query:string] fetchRowAsArray];
@@ -140,7 +140,7 @@
 - (void)createEvent
 {
 	NSArray *last = [self fetchLastEvent];
-	if( ! last || ! [[last objectAtIndex:2] doubleValue] == -1.0f )
+	if( ! last || [[last objectAtIndex:2] doubleValue] != -1.0f )
 	{
 		NSString *string = [NSString stringWithFormat:@"INSERT INTO event_list ( type_str,host_id,visitor_id,info_str,time_start ) VALUES ( '%@',%d,%d,'%@',%f );",
 												[_event type_str],
