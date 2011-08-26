@@ -40,6 +40,24 @@
 @synthesize time_start = _time_start;
 @synthesize time_end = _time_end;
 @synthesize time_length = _time_length;
+#pragma mark Mutators
+- (NSDate *)time_end
+{
+	if( [_time_end timeIntervalSince1970] == -1 )
+	{
+		return nil;
+	}
+	return _time_end;
+}
+- (double)time_length
+{
+	if( _time_length == -1 )
+	{
+		return 0;
+	}
+	return _time_length;
+}
+
 
 
 @end

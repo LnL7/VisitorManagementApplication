@@ -49,7 +49,7 @@
 			<object class="NSWindowTemplate" id="701342440">
 				<int key="NSWindowStyleMask">8223</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{111, 186}, {940, 409}}</string>
+				<string key="NSWindowRect">{{50, 50}, {940, 409}}</string>
 				<int key="NSWTFlags">611844096</int>
 				<string key="NSWindowTitle">List of Events</string>
 				<string key="NSWindowClass">NSPanel</string>
@@ -75,7 +75,7 @@
 											<string key="NSFrameSize">{898, 321}</string>
 											<reference key="NSSuperview" ref="355190592"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="798473543"/>
+											<reference key="NSNextKeyView" ref="434636617"/>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSTableHeaderView" key="NSHeaderView" id="303384945">
 												<reference key="NSNextResponder" ref="257100793"/>
@@ -343,7 +343,7 @@
 									<string key="NSFrame">{{544, 17}, {15, 327}}</string>
 									<reference key="NSSuperview" ref="871505496"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="434636617"/>
+									<reference key="NSNextKeyView" ref="81022191"/>
 									<reference key="NSTarget" ref="871505496"/>
 									<string key="NSAction">_doScroller:</string>
 									<double key="NSPercent">0.95327103137969971</double>
@@ -354,7 +354,7 @@
 									<string key="NSFrame">{{1, 323}, {898, 15}}</string>
 									<reference key="NSSuperview" ref="871505496"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="81022191"/>
+									<reference key="NSNextKeyView" ref="798473543"/>
 									<int key="NSsFlags">1</int>
 									<reference key="NSTarget" ref="871505496"/>
 									<string key="NSAction">_doScroller:</string>
